@@ -8,8 +8,8 @@
             . "$PSScriptRoot\Get-FirstRepeatedCharacter.ps1" -InputString "ecddrra" -Method Pretty | Should -Be "d"
         }
 
-        It "Is case sensitive" {
-            . "$PSScriptRoot\Get-FirstRepeatedCharacter.ps1" -InputString "ecDdra" -Method Pretty | Should -BeNullOrEmpty
+        It "Is case insensitive, returns the case of the first letter passed in" {
+            . "$PSScriptRoot\Get-FirstRepeatedCharacter.ps1" -InputString "ecDdra" -Method Dotnet | Should -Be "D"
         }
     }
     Context "Using 'Dotnet' method" {
@@ -21,8 +21,8 @@
             . "$PSScriptRoot\Get-FirstRepeatedCharacter.ps1" -InputString "ecddrra" -Method Dotnet | Should -Be "d"
         }
 
-        It "Is case sensitive" {
-            . "$PSScriptRoot\Get-FirstRepeatedCharacter.ps1" -InputString "ecDdra" -Method Dotnet | Should -BeNullOrEmpty
+        It "Is case insensitive, returns the case of the first letter passed in" {
+            . "$PSScriptRoot\Get-FirstRepeatedCharacter.ps1" -InputString "ecDdra" -Method Dotnet | Should -Be "D"
         }
     }
 

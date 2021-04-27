@@ -25,16 +25,16 @@ param
 
 process
 {
-    $CharArray = $InputString.ToCharArray()
-
     # The Switch statement in Windows PowerShell is way slower than in Core, so use if, elseif structure
+    $CharArray = $InputString.ToCharArray()
     if ($Method -eq "Pretty")
     {
         $CharsAlreadyTried = @()
 
         foreach ($Char in $CharArray)
         {
-            if ($Char -cin $CharsAlreadyTried) { return $Char }
+            # The -in comparison operator is already case-insensitive
+            if ($Char -in $CharsAlreadyTried) { return $Char }
             else { $CharsAlreadyTried += $Char }
         }
     }
@@ -45,7 +45,11 @@ process
         foreach ($Char in $CharArray)
         {
             if ($CharsAlreadyTried.Contains($Char)) { return $Char }
-            else { $CharsAlreadyTried.Add($Char) }
+            else
+            {
+                $CharsAlreadyTried.Add($Char.ToString().ToLower())
+                $CharsAlreadyTried.Add($Char.ToString().ToUpper())
+            }
         }
     }
     else { throw "Method $Method was invalid" }
