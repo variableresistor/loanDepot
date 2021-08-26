@@ -1,0 +1,113 @@
+{
+    "editor.formatOnType": true,
+    "editor.minimap.enabled": false,
+    "editor.renderLineHighlight": "none",
+    "editor.snippetSuggestions": "bottom",
+    "editor.fontFamily": "Lucida Console, 'Courier New', monospace",
+    "editor.dragAndDrop": false,
+    "editor.wordBasedSuggestions": false,
+    "editor.tabCompletion": "on",
+    "editor.selectionHighlight": false,
+    "editor.occurrencesHighlight": false,
+    "explorer.confirmDelete": false,
+    "files.trimTrailingWhitespace": true,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 10000,
+    "files.hotExit": "onExitAndWindowClose",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "update.enableWindowsBackgroundUpdates": false,
+
+    // Terminal Stuff
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+
+    // PowerShell
+    "powershell.codeFormatting.preset": "OTBS",
+    "workbench.colorTheme": "PowerShell ISE",
+    "editor.tokenColorCustomizations": {
+        "[PowerShell ISE]": {
+            "comments": "#006400",
+            "types": "#006161",
+            "strings": "#8b0000",
+            "variables": "#FF4500",
+            "keywords": "#00008b",
+            "functions": "#0000FF",
+            "numbers": "#800080",
+            "textMateRules": [
+                {
+                    "scope": ["variable.parameter","meta.scriptblock.powershell"],
+                    "settings": {
+                        "foreground": "#000080"
+                    }
+                },
+                {
+                    "scope": ["meta.group.simple.subexpression.powershell","keyword.operator"],
+                    "settings": {
+                        "foreground": "#696969"
+                    }
+                },
+                {
+                    "scope": "support.function.attribute.powershell",
+                    "settings": {
+                        "foreground": "#00BFFF"
+                    }
+                },
+                {
+                    "scope": "variable.other.member.powershell",
+                    "settings": {
+                        "foreground": "#000000"
+                    }
+                },
+                {
+                    "scope": "meta.function.powershell",
+                    "settings": {
+                        "foreground": "#00008B"
+                    }
+                },
+                {
+                    "scope": ["storage.modifier.scope.powershell","constant.language","support.constant.variable.powershell","variable.language.powershell"],
+                    "settings": {
+                        "foreground": "#FF4500"
+                    }
+                },
+                {
+                    "scope": "storage.type.powershell",
+                    "settings": {
+                        "foreground": "#006161"
+                    }
+                }
+            ]
+        }
+    },
+
+    "powershell.codeFormatting.whitespaceAroundPipe": true,
+    "powershell.integratedConsole.focusConsoleOnExecute": false,
+    "powershell.sideBar.CommandExplorerVisibility": false,
+    "powershell.buttons.showPanelMovementButtons": true,
+    "powershell.codeFormatting.addWhitespaceAroundPipe": false,
+    "powershell.integratedConsole.forceClearScrollbackBuffer": true,
+    // "powershell.pester.useLegacyCodeLens": true,
+    "powershell.codeFormatting.openBraceOnSameLine": false,
+    "workbench.iconTheme": "vs-seti",
+    "powershell.codeFolding.showLastLine": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "redhat.telemetry.enabled": true,
+    "window.zoomLevel": -1,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "yaml.schemas": {
+        "file:///c%3A/Users/neiwhite/.vscode/extensions/atlassian.atlascode-2.9.1/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.jqlList": [
+        {
+            "id": "0ab912a1-af9d-4f3c-af2e-94b67fef2f8b",
+            "enabled": true,
+            "name": "My cnr Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "55c85c84-db9d-464a-b93e-45489f802949",
+            "monitor": true
+        }
+    ],
+    "powershell.codeFormatting.newLineAfterOpenBrace": false,
+    "powershell.pester.useLegacyCodeLens": false,
+    "powershell.promptToUpdatePowerShell": false
+}
