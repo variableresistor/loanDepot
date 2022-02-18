@@ -23,7 +23,6 @@
 
     // PowerShell
     "powershell.codeFormatting.preset": "OTBS",
-    "workbench.colorTheme": "PowerShell ISE",
     "editor.tokenColorCustomizations": {
         "[PowerShell ISE]": {
             "comments": "#006400",
@@ -53,7 +52,7 @@
                     }
                 },
                 {
-                    "scope": ["variable.other.member.powershell","variable.parameter.attribute.powershell"],
+                    "scope": ["variable.other.member.powershell","variable.parameter.attribute.powershell","interpolated.complex.source.powershell"],
                     "settings": {
                         "foreground": "#000000"
                     }
@@ -92,23 +91,34 @@
             ]
         }
     },
-
-    "powershell.codeFormatting.whitespaceAroundPipe": true,
     "powershell.integratedConsole.focusConsoleOnExecute": false,
     "powershell.sideBar.CommandExplorerVisibility": false,
     "powershell.buttons.showPanelMovementButtons": true,
-    "powershell.codeFormatting.addWhitespaceAroundPipe": false,
     "powershell.integratedConsole.forceClearScrollbackBuffer": true,
-    // "powershell.pester.useLegacyCodeLens": true,
-    "powershell.codeFormatting.openBraceOnSameLine": false,
     "workbench.iconTheme": "vs-seti",
-    "powershell.codeFolding.showLastLine": true,
+    "powershell.codeFolding.showLastLine": false,
     "security.workspace.trust.untrustedFiles": "open",
-    "redhat.telemetry.enabled": false,
     "window.zoomLevel": -1,
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "powershell.codeFormatting.newLineAfterOpenBrace": false,
+    "editor.links": false,
+    "powershell.codeFormatting.addWhitespaceAroundPipe": true,
+    "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+    "git.confirmSync": false,
+    "files.associations": {
+        "*.yml": "azure-pipelines"
+    },
+    "azure.resourceFilter": [
+        "3a0fdda6-105d-4fce-bb8a-1ed83b71e72b/2790c96e-d930-49a4-9767-6985d3337ba7"
+    ],
+    "azure-pipelines.customSchemaFile": "C:\\Users\\neiwhite\\OneDrive - City National Bank\\Documents\\yamlschema.json",
+    "[azure-pipelines]": {
+        "editor.defaultFormatter": "ms-azure-devops.azure-pipelines"
+    },
+    "git.pruneOnFetch": true,
+    "github.gitAuthentication": false,
+    "git.autofetch": true,
+    "workbench.colorTheme": "PowerShell ISE",
     "powershell.pester.useLegacyCodeLens": false,
-    "powershell.promptToUpdatePowerShell": false,
-    "editor.links": false
+    "powershell.debugging.createTemporaryIntegratedConsole": true,
 }
